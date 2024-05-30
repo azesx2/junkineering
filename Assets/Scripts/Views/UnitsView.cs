@@ -16,7 +16,10 @@ namespace Core.Views
         private void Update()
         {
 #if UNITY_EDITOR
-            Refresh();
+            if (!Application.isPlaying)
+            {
+                Refresh();
+            }
 #endif
         }
 
